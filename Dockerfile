@@ -3,7 +3,9 @@ MAINTAINER docker@chabs.name
 
 ENV AMULE_VERSION 2.3.3
 
-RUN apk --update add gd geoip libpng libwebp pwgen sudo amule zlib bash
+RUN apk --update add gd geoip libpng libwebp pwgen sudo zlib bash
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+  amule
 
 # Install a nicer web ui
 RUN cd /usr/share/amule/webserver \
