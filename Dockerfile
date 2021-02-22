@@ -1,11 +1,11 @@
 FROM alpine:latest
 MAINTAINER docker@chabs.name
 
-ENV AMULE_VERSION 2.3.3
-
-RUN apk --update add gd geoip libpng libwebp pwgen sudo zlib bash
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
   amule
+RUN apk --update add gd geoip libpng libwebp pwgen sudo zlib bash && \
+    apk --update add --virtual build-dependencies git
+
 
 # Install a nicer web ui
 RUN cd /usr/share/amule/webserver \
