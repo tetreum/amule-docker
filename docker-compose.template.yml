@@ -3,6 +3,8 @@ services:
   amule:
     image: tetreum/amule
     ports:
+      ## web server port
+      - "4711:4711"
       - "4712:4712"
       - "4662:4662"
       - "4672:4672/udp"
