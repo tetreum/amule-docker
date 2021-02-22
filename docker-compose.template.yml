@@ -13,6 +13,8 @@ services:
       - PUID=1000
       - GUID=1000
       - WEBUI_PWD=c0mpl3x_p4ssw0rd
+      ## template can be default or AmuleWebUI-Reloaded
+      - WEBUI_TEMPLATE=AmuleWebUI-Reloaded
     networks:
       amule:
         aliases:
