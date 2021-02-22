@@ -1,6 +1,7 @@
 # Notice
 
-This Dockerfile is only for x86_64 architecture only. If you're interested in ARM port, have a look at [this fork](https://github.com/synopsis8/dockerfiles)
+This Dockerfile is only for x86_64 architecture only and it's based on https://github.com/tchabaud/dockerfiles/tree/master/amule.
+I've just updated Amule version.
 
 # Configuration
 

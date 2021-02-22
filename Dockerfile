@@ -1,8 +1,8 @@
 FROM alpine:latest
 MAINTAINER docker@chabs.name
 
-ENV AMULE_VERSION 2.3.2
-ENV UPNP_VERSION 1.6.22
+ENV AMULE_VERSION 2.3.3
+ENV UPNP_VERSION 1.8.4
 ENV CRYPTOPP_VERSION CRYPTOPP_5_6_5
 
 RUN apk --update add gd geoip libpng libwebp pwgen sudo wxgtk2.8 zlib bash && \
