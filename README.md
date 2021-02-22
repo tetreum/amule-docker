@@ -1,7 +1,8 @@
 # Notice
 
-This Dockerfile is only for x86_64 architecture only and it's based on https://github.com/tchabaud/dockerfiles/tree/master/amule.
-I've just updated Amule version.
+Based on https://github.com/tchabaud/dockerfiles/tree/master/amule.
+I've just updated aMule & upnp versions.
+This Dockerfile is only for x86_64 architecture only-
 
 # Configuration
 
