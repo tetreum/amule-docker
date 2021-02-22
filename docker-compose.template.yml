@@ -1,6 +1,7 @@
 version: '2'
 services:
   amule:
+    container_name: amule
     image: tetreum/amule
     ports:
       ## web server port
