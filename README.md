@@ -14,6 +14,10 @@ mkdir -p ./amule/tmp
 mkdir -p ./amule/incoming
 ```
 
+# Docker-compose usage:
+
+https://github.com/tetreum/amule-docker/blob/main/docker-compose.template.yml
+
 # Usage
 
 Just run the container with the following command lines (replace brackets with the values you want to use) :
