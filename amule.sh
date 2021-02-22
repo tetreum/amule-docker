@@ -280,6 +280,9 @@ else
     echo "Switched web UI theme to ${AMULE_WEBUI_TEMPLATE}"
 fi
 
+# update recursive shared directories on each restart
+find /incoming -type d -exec sh -c 'printf "%s/\n" "$0"' {} \; > /home/amule/.aMule/shareddir.dat
+
 chown -R "${AMULE_UID}:${AMULE_GID}" /home/amule
 
 sudo -H -u '#'"${AMULE_UID}" sh -c "amuled -c ${AMULE_HOME} -o"
