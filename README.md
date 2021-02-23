@@ -1,8 +1,13 @@
 # Notice
 
 Based on https://github.com/tchabaud/dockerfiles/tree/master/amule.
-I've just updated aMule & upnp versions.
-This Dockerfile is only for x86_64 architecture only-
+
+I've just:
+- Switched to edge aMule
+- Added recursive folder sharing
+- Set an updated server.met url
+- Set `AmuleWebUI-Reloaded` theme by default
+- Added missing ports & details to `docker-compose` template.
 
 # Configuration
 
