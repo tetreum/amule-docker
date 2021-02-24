@@ -281,7 +281,7 @@ else
 fi
 
 # update recursive shared directories on each restart
-find /incoming -type d -exec sh -c 'printf "%s/\n" "$0"' {} \; > /home/amule/.aMule/shareddir.dat
+find /incoming -type d ! -empty -exec sh -c 'printf "%s/\n" "$0"' {} \; > /home/amule/.aMule/shareddir.dat
 
 chown -R "${AMULE_UID}:${AMULE_GID}" /home/amule
 
