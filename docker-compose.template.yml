@@ -16,6 +16,10 @@ services:
       - WEBUI_PWD=c0mpl3x_p4ssw0rd
       ## template can be default or AmuleWebUI-Reloaded
       - WEBUI_TEMPLATE=AmuleWebUI-Reloaded
+      ## Folders that you want to share recursively
+      ## you can set multiple folders using a comma separated list
+      ## Example: -SHARED_FOLDERS=/incoming,/storage/movies,/yotube/shows
+      -SHARED_FOLDERS=/incoming
     networks:
       amule:
         aliases:
