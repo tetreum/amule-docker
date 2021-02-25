@@ -12,6 +12,7 @@ services:
     environment:
       - PUID=1000
       - GUID=1000
+      ## Set the password that you want for accessing the ui
       - WEBUI_PWD=c0mpl3x_p4ssw0rd
       ## template can be default or AmuleWebUI-Reloaded
       - WEBUI_TEMPLATE=AmuleWebUI-Reloaded
