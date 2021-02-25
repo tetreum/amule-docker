@@ -281,7 +281,17 @@ else
 fi
 
 # update recursive shared directories on each restart
-find /incoming -type d ! -empty -exec sh -c 'printf "%s/\n" "$0"' {} \; > /home/amule/.aMule/shareddir.dat
+if [[ -z "${SHARED_FOLDERS}" ]]; then
+  SHARED_FOLDERS="/incoming"
+fi
+
+# reset file before starting
+echo "" > /home/amule/.aMule/shareddir.dat
+
+IFS=',' read -ra ADDR <<< "$SHARED_FOLDERS"
+for i in "${ADDR[@]}"; do
+    find $i -type d ! -empty -exec sh -c 'printf "%s/\n" "$0"' {} \; > /home/amule/.aMule/shareddir.dat
+done
 
 chown -R "${AMULE_UID}:${AMULE_GID}" /home/amule
 
