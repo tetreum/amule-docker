@@ -290,7 +290,7 @@ echo "" > /home/amule/.aMule/shareddir.dat
 
 IFS=',' read -ra ADDR <<< "$SHARED_FOLDERS"
 for i in "${ADDR[@]}"; do
-    find $i -type d ! -empty -exec sh -c 'printf "%s/\n" "$0"' {} \; > /home/amule/.aMule/shareddir.dat
+    find $i -type d ! -empty -exec sh -c 'printf "%s/\n" "$0"' {} \; >> /home/amule/.aMule/shareddir.dat
 done
 
 chown -R "${AMULE_UID}:${AMULE_GID}" /home/amule
